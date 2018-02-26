@@ -80,7 +80,7 @@ xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.org/xsd/mav
  
  <dependency>
   <groupId>log4j</groupId>
-  <artifactId>log4j</artifactId>
+      <artifactId>log4j</artifactId>
   <version>1.2.17</version>
  </dependency>
  
@@ -144,5 +144,10 @@ xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.org/xsd/mav
    <configuration>
    <suiteXmlFiles>
  
- 
+     <suiteXmlile>${suiteXmlFile}</suiteXmlFile>
+  </suiteXmlFiles> 
+   </configuration>
+        </plugin>
+        </build>
+  </project>
   
