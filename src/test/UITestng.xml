@@ -1,0 +1,6 @@
+<suite name = "Regression UI tests"  verbose="1" >
+<test name = "regression test for UI " >
+<classes>
+ <class name = "tests.features.UITestRunner" />
+ </test>
+ </suite>
