@@ -1,0 +1,32 @@
+package tests.step.serviceStepDefinition;
+
+public class commonFunctions {
+
+public static Response response;
+public static String accessToken;
+protected RequestSpecification spec = given();
+protected static RequestSpecification token;
+public static Properties prop;
+
+public String getToken(){
+System.setProperty("https.proxyHost","your proxy url");
+System.setProperty("https.proxyPort","your proxy port");
+
+response = given().auth().preemptive().basic("clientID","cliendpassword").contentType(ContentType.URLENC).when().body("grant_type=
+            client_credentials&response_type=token").post("token url");
+     
+     accessToken = response.path("access_token");
+     
+     return accessToken;
+     
+     }
+     
+     public static Properties readData() throws IOException{
+     
+     prop = new Properties();
+     
+     FileInputStream fis = new FileInputStream("src//main//resources//project.properties");
+     prop.load(fis);
+     return prop;
+     }
+     }
