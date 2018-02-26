@@ -1,0 +1,6 @@
+<suite name = "Regression tests"  verbose="1" >
+<test name = "regression test for services" >
+<classes>
+ <class name = "tests.features.ServicesTestRunner" />
+ </test>
+ </suite>
